@@ -1,18 +1,21 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+    <meta charset="utf-8"/>
+    <script>
+function 伝言する() {
+  if (入力内容.value === "") {
+    alert("内容を入力してください");
+  } else {
+    伝言エリア.innerText = 入力内容.value;
+    alert("伝言をセットしました");
+  }
+}
+</script>
   </head>
   <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="2 3 -5" radius="0.5" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 2.25 -3" radius="0.5" height="1.5" color="#A85B1B"></a-cylinder>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#0091C6"></a-plane>
-      <a-plane position="4 0 -8" rotation="-90 0 0" width="4" height="4" color="#0091C6"></a-plane>
-      <a-plane position="4 0 -4" rotation="-90 0 0" width="4" height="4" color="#0000FF"></a-plane>
-      <a-plane position="0 0 -8" rotation="-90 0 0" width="4" height="4" color="#0000FF"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+    伝言板
+    <p id="伝言エリア">伝言がまだありません</p>
+  <input id="入力内容"><button onclick="伝言する();">セット</button>
   </body>
 </html>
